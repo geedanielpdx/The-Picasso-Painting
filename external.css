@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: goldenrod;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  color: white;
+  font-size: 40px;
+  background-color: goldenrod;
+}
+
+P {
+  color: darkblue;
+  font-size: 22px;
+  font-style: oblique;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 100px;
+  justify-items: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.artwork {
+  width: 80%;
+  height: 80vh;
+  position: relative;
+}
+
+.shape {
+  position: absolute;
+}
+
+.circle {
+  top: calc(50% - 6em);
+  left: calc(50% - 2em);
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background-color: #ff4136;
+}
+
+.square {
+  top: calc(50% - 7.1em);
+  right: calc(50% - 7em);
+  width: 15em;
+  height: 15em;
+  background-color: #0074d9;
+  z-index: -2;
+}
+
+.triangle {
+  top: calc(50% - 10em);
+  left: calc(50% - 10em);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10em 17.32em 17em;
+  border-color: transparent transparent #2ecc40 transparent;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1680px) {
+  /* styles for desktop screens */
+  .artwork {
+    width: 60%;
+    height: 60vh;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* styles for iPad screens */
+  .artwork {
+    width: 50%;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* styles for mobile screens */
+  .artwork {
+    width: 40%;
+    height: 40vh;
+  }
+}
